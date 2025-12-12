@@ -16,11 +16,11 @@
 
 ### `src/` (Core Logic)
 Main application code and logic handlers.
-*   `digitRecognition.py`: **Main Application**. Runs the camera loop, captures the frame, and orchestrates the recognition pipeline.
-*   `ecuacion.py`: Handles the logical assembly of the equation string and solves it using **SymPy**.
+*   `main_solver.py`: **Main Application**. Runs the camera loop, captures the frame, and orchestrates the recognition pipeline.
+*   `equation_solver.py`: Handles the logical assembly of the equation string and solves it using **SymPy**.
 *   `symbols.py`: Contains the logic for the **SVM** model to recognize mathematical operators (`+`, `-`, `*`, `/`).
-*   `centrar.py`: **Preprocessing Utility**. Algorithm to center digits within a 28x28 bounding box, matching MNIST training conditions.
-*   `inversor.py`: **Dataset Tool**. Helper script to batch-invert colors (White -> Black) for dataset augmentation.
+*   `digit_centering.py`: **Preprocessing Utility**. Algorithm to center digits within a 28x28 bounding box, matching MNIST training conditions.
+*   `dataset_inverter.py`: **Dataset Tool**. Helper script to batch-invert colors (White -> Black) for dataset augmentation.
 
 ### `training/` (Model Training)
 Scripts used to create the AI models.
@@ -30,9 +30,9 @@ Scripts used to create the AI models.
 
 ### `tests/` (Demos & Checks)
 Simple scripts to test components in isolation.
-*   `test.py`: CLI script to test the **SVM** on a single image file.
-*   `test2.py`: **GUI Demo** (Tkinter) to load an image and predict its symbol interactively.
-*   `test_model.py`: CLI script to test the **CNN** digit recognizer on a single image.
+*   `test_svm_single.py`: CLI script to test the **SVM** on a single image file.
+*   `gui_demo.py`: **GUI Demo** (Tkinter) to load an image and predict its symbol interactively.
+*   `test_cnn_single.py`: CLI script to test the **CNN** digit recognizer on a single image.
 
 ### `docs/`
 *   `Memoria.pdf`: Full project documentation and academic report.
